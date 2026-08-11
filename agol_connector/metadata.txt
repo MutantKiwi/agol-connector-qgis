@@ -1,0 +1,22 @@
+[general]
+name=AGOL Connector
+qgisMinimumVersion=3.16
+description=Connect to ArcGIS Online — browse, load and upload feature services. No Esri libraries required.
+version=1.0.0
+author=mutant.kiwi
+email=hello@mutant.kiwi
+about=Browse and search ArcGIS Online content directly in QGIS. Load feature services and web maps as QGIS layers. Upload vector layers to ArcGIS Online as hosted services. Manage connections, folders and groups. All via the public REST API — no Esri libraries required.
+
+  Working on:
+  - Viewing map services, image services, tile layers and web maps
+  - Uploading raster layers to ArcGIS Online
+  - Editing feature services
+tracker=https://github.com/MutantKiwi/agol-connector-qgis/issues
+repository=https://github.com/MutantKiwi/agol-connector-qgis
+tags=arcgis,esri,agol,arcgis online,feature service,map service,web map,rest api
+category=Web
+icon=resources/icon_agol_root.png
+experimental=False
+deprecated=False
+changelog=https://github.com/MutantKiwi/agol-connector-qgis/releases/tag/1.0.0
+hasProcessingProvider=yes
