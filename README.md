@@ -7,6 +7,8 @@ Connect QGIS to **ArcGIS Online** via the public REST API. No Esri libraries req
 ![Licence](https://img.shields.io/badge/licence-GPLv3-orange)
 
 ---
+## Background
+The premise behind this plugin is to allow QGIS users to work with ArcGIS Online (AGOL). Many environments use both Esri products and Open Source software, or QGIS on an Apple computer, so this provides some form of connectivity. It is a work in progress.
 
 ## Features
 
