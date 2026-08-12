@@ -126,7 +126,7 @@ The premise behind this plugin is to allow QGIS users to work with ArcGIS Online
 
 - **No Esri libraries** — all communication via `urllib` against the public AGOL REST API
 - **PyQt5 / PyQt6 compatible** — enum paths resolved at import time via `compat.py`
-- **QGIS 3.16+** compatible; tested on QGIS 3.44
+- **QGIS 3.16+** compatible; tested on QGIS 3.44.13 and QGIS 4.20.1
 - Token auth: `generateToken` (username/password) or OAuth2
 - Pagination: objectIds batch strategy (Strategy A) with resultOffset fallback (Strategy B)
 - Upload: multipart POST → addItem → publish; auto-switches to Shapefile ZIP for layers > 50 MB
