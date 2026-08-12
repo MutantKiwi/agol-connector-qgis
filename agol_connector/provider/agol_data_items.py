@@ -425,7 +425,20 @@ class AGOLDataItemProvider(QgsDataItemProvider):
         return "AGOL"
 
     def capabilities(self):
-        return provider_capabilities()
+        # QGIS 4.x (PyQt6 SIP): must return the enum member directly —
+        # no int, no OR operation. SIP maps the enum to Capabilities automatically.
+        # Try each form in order: nested enum (4.x), flat enum (3.x), raw int.
+        from qgis.core import QgsDataItemProvider as _P
+        for attr in (
+            lambda: _P.Capability.Other,     # QGIS 4.x nested
+            lambda: _P.Other,                # QGIS 3.x flat
+        ):
+            try:
+                return attr()
+            except AttributeError:
+                continue
+        # Absolute last resort — return whatever super() gives (may be 0/NoCapabilities)
+        return super().capabilities()
 
     def createDataItem(self, path: str, parent) -> Optional[QgsDataItem]:
         if path in ("", "/"):
